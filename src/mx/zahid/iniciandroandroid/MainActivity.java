@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		//Enviando una cadena de texto a linearLayout con el metodo SetText
+		//prueba
 		TextView titulo = (TextView) findViewById(R.id.titulo);
 		titulo.setText("Hola");
 	}
