@@ -3,9 +3,11 @@ package mx.zahid.iniciandroandroid;
 
 import android.os.Bundle;
 import android.app.Activity;
+
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+
 
 
 
@@ -15,15 +17,16 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		/*Definicion con View*/
 		View vista = findViewById(R.id.titulo);
 		TextView texto = (TextView) vista;
+		texto.setText("Texto 1 Definido con setText");
+		/*Añadir texto con append*/
+		texto.append("\n Texto 2 con append");
+		texto.append("\n Texto 3 con append");
+		texto.append("\n Texto  con append");
+		/*-----------------------*/
 
-		for(double i=0;  i<1; i=i+0.01){
-			/*una tabla del seno*/
-			double senodex =  Math.sin(i);
-			texto.append("\n Seno"+"("+i+")= "+senodex);
-			
-		}
 	}
 	
 
