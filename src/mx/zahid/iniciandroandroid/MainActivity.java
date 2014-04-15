@@ -3,6 +3,7 @@ package mx.zahid.iniciandroandroid;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.Menu;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		TextView texto = (TextView) findViewById(R.id.titulo);
 		texto.setText("Texto desde "+"Java");
+		texto.setTextColor(Color.argb(255, 255, 255, 0));
 	}
 
 	@Override
