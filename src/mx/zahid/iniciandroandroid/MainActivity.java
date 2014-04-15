@@ -9,28 +9,32 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+
 public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		TextView texto = (TextView) findViewById(R.id.titulo);
-		texto.setText("Texto desde "+"Java");
-		texto.setTextColor(Color.argb(255, 255, 255, 0));
+		//******Medoto Print()******//
+		//a continuación se define un metodo print
+		RelativeLayout rl = (RelativeLayout) findViewById(R.id.relativeLayouttest);
+	    //**************************//
+		//envio de cadena de texto con propiedades al metodo print
+		print(rl, "\n Prueba 1",30,255,255,0);
+	}
+	
+	//Se creo la función print (imprimir)
+	public void print(RelativeLayout rl, String texto, int size, int r,int g, int b){
+		//propiedades del texto declaradas//
+		TextView text = new TextView(this);
+		text.setTextSize(size);
+		text.setTextColor(Color.argb(255, r, g, b));
+		//texto adicional a textView
+		text.setText(texto);
+		//envio de text a relative layout
+		rl.addView(text);
 		
-		//**Añadiendo texto adicional con addView**//
-		//******************************************
-		TextView textV =new TextView(this);
-		textV.setTextColor(Color.argb(255, 255, 0, 255));
-		textV.setTextSize(40);
-		textV.setText("\n Añadiendo nuevo texto con addView");
-		//******************************************
-		RelativeLayout ll = (RelativeLayout) findViewById(R.id.relativeLayouttest);
-		
-		//***enviamos texto a relative layout***//
-		ll.addView(textV);
-		//*************************************//
 	}
 
 	@Override
