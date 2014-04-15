@@ -4,7 +4,7 @@ package mx.zahid.iniciandroandroid;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.widget.TextView;
+
 
 public class MainActivity extends Activity {
 
@@ -12,10 +12,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//Enviando una cadena de texto a linearLayout con el metodo SetText
-		//prueba 2
-		TextView titulo = (TextView) findViewById(R.id.titulo);
-		titulo.setText("Hola");
+		
 	}
 
 	@Override
