@@ -3,9 +3,8 @@ package mx.zahid.iniciandroandroid;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.Color;
 import android.view.Menu;
-import android.widget.LinearLayout;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -16,33 +15,17 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		View vista = findViewById(R.id.titulo);
+		TextView texto = (TextView) vista;
 
-		LinearLayout ll = (LinearLayout) findViewById(R.id.linearLayouttest);
-	    //**************************//
-		//envio de cadena de texto con propiedades al metodo print,
-		//envia un resultado de operación --
-		
-		for(int i=0;  i<10; i++){
+		for(double i=0;  i<1; i=i+0.01){
 			/*una tabla del seno*/
-			double x = i /10.0;
-			double senodex =  Math.sin(x);
-			print(ll,"\n Seno"+"("+x+")= "+senodex,15,255,255,0);
+			double senodex =  Math.sin(i);
+			texto.append("\n Seno"+"("+i+")= "+senodex);
 			
 		}
 	}
 	
-	//Se creo la función print (imprimir)
-	public void print(LinearLayout ll, String texto, int size, int r,int g, int b){
-		//propiedades del texto declaradas//
-		TextView text = new TextView(this);
-		text.setTextSize(size);
-		text.setTextColor(Color.argb(255, r, g, b));
-		//texto adicional a textView
-		text.setText(texto);
-		//envio de text a relative layout
-		ll.addView(text);
-		
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
