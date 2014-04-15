@@ -16,12 +16,20 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		/*
+		 * Variables declaradas de forma 
+		 * local, para uso de operación 
+		 * aritmetica*/
+		double a=2.5;
+		double b=1.25;
+		double c=a+b;
 		//******Medoto Print()******//
 		//a continuación se define un metodo print
 		RelativeLayout rl = (RelativeLayout) findViewById(R.id.relativeLayouttest);
 	    //**************************//
-		//envio de cadena de texto con propiedades al metodo print
-		print(rl, "\n Prueba 1",30,255,255,0);
+		//envio de cadena de texto con propiedades al metodo print,
+		//envia un resultado de operación --
+		print(rl, "\n La suma de "+"a " + a + " + "+"b "+b+" es "+c,30,255,255,0);
 	}
 	
 	//Se creo la función print (imprimir)
